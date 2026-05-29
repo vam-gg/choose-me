@@ -13,6 +13,16 @@
         }
         h1 { color: #ff9f0a; font-size: 2em; margin-bottom: 0.2em; }
         .subtitle { color: #aaa; margin-bottom: 30px; }
+        .lang-switch {
+            margin-bottom: 20px;
+        }
+        .lang-switch a {
+            color: #ff9f0a; text-decoration: none;
+            margin: 0 8px; font-size: 16px;
+        }
+        .lang-switch a.active {
+            font-weight: bold; text-decoration: underline;
+        }
         .season-list {
             display: flex; flex-direction: column;
             gap: 15px; align-items: center;
@@ -30,6 +40,10 @@
     </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <a href="index.html" class="active">RU</a> |
+        <a href="index-en.html">EN</a>
+    </div>
     <h1>📖 Выбери меня</h1>
     <p class="subtitle">Выберите сезон для чтения:</p>
     <div class="season-list">

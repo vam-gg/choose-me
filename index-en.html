@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Me — Seasons</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0; padding: 30px 16px;
+            background: #1c1c1e; color: #e0e0e0;
+            text-align: center;
+        }
+        h1 { color: #ff9f0a; font-size: 2em; margin-bottom: 0.2em; }
+        .subtitle { color: #aaa; margin-bottom: 30px; }
+        .lang-switch {
+            margin-bottom: 20px;
+        }
+        .lang-switch a {
+            color: #ff9f0a; text-decoration: none;
+            margin: 0 8px; font-size: 16px;
+        }
+        .lang-switch a.active {
+            font-weight: bold; text-decoration: underline;
+        }
+        .season-list {
+            display: flex; flex-direction: column;
+            gap: 15px; align-items: center;
+        }
+        .season-link {
+            background: #3a3a3c; color: #e0e0e0;
+            text-decoration: none; padding: 14px 24px;
+            border-radius: 12px; font-size: 18px;
+            font-weight: 500; width: 220px;
+            transition: background 0.2s;
+        }
+        .season-link:hover { background: #5a5a5c; }
+        .season-link:active { background: #ff9f0a; color: #000; }
+        footer { margin-top: 40px; color: #666; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <div class="lang-switch">
+        <a href="index.html">RU</a> |
+        <a href="index-en.html" class="active">EN</a>
+    </div>
+    <h1>📖 Choose Me</h1>
+    <p class="subtitle">Select a season to read:</p>
+    <div class="season-list">
+        <a class="season-link" href="season1-en.html">Season 1 — The Dreamer</a>
+        <a class="season-link" href="season2-en.html">Season 2 — One-Man Show</a>
+        <a class="season-link" href="season3-en.html">Season 3 — Unforgotten Old</a>
+        <a class="season-link" href="season4-en.html">Season 4 — The Last Pain</a>
+        <a class="season-link" href="epilogue-en.html">Epilogue</a>
+    </div>
+    <footer>© «Choose Me» 2026</footer>
+</body>
+</html>

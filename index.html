@@ -14,7 +14,6 @@
         h1 { color: #ff9f0a; font-size: 2em; margin-bottom: 0.2em; }
         .subtitle { color: #aaa; margin-bottom: 30px; }
         
-        /* Верхнее меню */
         .top-menu {
             display: flex;
             justify-content: space-between;
@@ -51,7 +50,6 @@
             font-weight: bold; text-decoration: underline;
         }
         
-        /* Список сезонов */
         .season-list {
             display: flex; flex-direction: column;
             gap: 15px; align-items: center;
@@ -66,7 +64,6 @@
         .season-link:hover { background: #5a5a5c; }
         .season-link:active { background: #ff9f0a; color: #000; }
         
-        /* Блок контактов */
         #contactsBlock {
             background: #2c2c2e;
             border-radius: 12px;
@@ -86,15 +83,6 @@
             color: #ff9f0a;
             font-weight: bold;
             font-size: 1.1em;
-        }
-        #contactsBlock .contacts-header a {
-            color: #888;
-            text-decoration: none;
-            font-size: 20px;
-            line-height: 1;
-        }
-        #contactsBlock .contacts-header a:hover {
-            color: #e0e0e0;
         }
         .contact-item {
             color: #e0e0e0;
@@ -120,11 +108,10 @@
 </head>
 <body>
 
-    <!-- Верхнее меню -->
     <div class="top-menu">
         <div class="menu-left">
             <a href="#" class="active" onclick="showTab('seasons'); return false;">📖 Сезоны</a>
-            <a href="#" onclick="showTab('feedback'); return false;">✉️ Оставить отзыв</a>
+            <a href="#" onclick="showTab('contacts'); return false;">✉️ Контакты</a>
         </div>
         <div class="lang-switch">
             <a href="index.html" class="active">RU</a> |
@@ -132,7 +119,6 @@
         </div>
     </div>
 
-    <!-- Блок: Сезоны -->
     <div id="seasonsTab">
         <h1>📜 Выбери меня</h1>
         <p class="subtitle">Выберите сезон для чтения:</p>
@@ -145,26 +131,20 @@
         </div>
     </div>
 
-    <!-- Блок: Оставить отзыв (изначально скрыт) -->
-    <div id="feedbackTab" style="display: none;">
-        <h1 style="margin-top: 0;">✉️ Оставить отзыв</h1>
-        <p class="subtitle">Поделитесь своим мнением о прочитанном</p>
+    <div id="contactsTab" style="display: none;">
+        <h1 style="margin-top: 0;">✉️ Контакты</h1>
+        <p class="subtitle">Связаться со мной</p>
         
         <div id="contactsBlock">
             <div class="contacts-header">
-                <span>📝 Написать отзыв</span>
-            </div>
-            
-            <!-- Сюда потом добавим форму -->
-            <div style="text-align: center; padding: 20px 0; color: #888;">
-                Здесь будет форма для отзыва
+                <span>📬 Написать</span>
             </div>
             
             <div class="contact-item">
-                📧 <a href="mailto:ваш-email@example.com">ваш-email@example.com</a>
+                📧 <a href="mailto:andrey.hatcenko@gmail.com">andrey.hatcenko@gmail.com</a>
             </div>
             <div class="contact-item">
-                💬 <a href="https://t.me/ваш_юз" target="_blank">@ваш_юз</a>
+                💬 <a href="https://t.me/vam_gg" target="_blank">@vam_gg</a>
             </div>
         </div>
     </div>
@@ -173,18 +153,15 @@
 
     <script>
         function showTab(tab) {
-            // Скрываем все вкладки
             document.getElementById('seasonsTab').style.display = 'none';
-            document.getElementById('feedbackTab').style.display = 'none';
+            document.getElementById('contactsTab').style.display = 'none';
             
-            // Показываем нужную
             if (tab === 'seasons') {
                 document.getElementById('seasonsTab').style.display = 'block';
-            } else if (tab === 'feedback') {
-                document.getElementById('feedbackTab').style.display = 'block';
+            } else if (tab === 'contacts') {
+                document.getElementById('contactsTab').style.display = 'block';
             }
             
-            // Меняем активную ссылку в меню
             const links = document.querySelectorAll('.menu-left a');
             links.forEach(link => link.classList.remove('active'));
             

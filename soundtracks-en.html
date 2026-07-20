@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundtracks — Choose Me</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1c1c1e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 30px 16px;
+            text-align: center;
+            min-height: 100vh;
+        }
+        a {
+            color: #ff9f0a;
+            text-decoration: none;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 24px;
+            padding: 10px 24px;
+            border-radius: 40px;
+            background: #2c2c2e;
+            color: #aaa;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        .back:hover {
+            background: #3a3a3c;
+            color: #fff;
+        }
+        h1 {
+            color: #ff9f0a;
+            font-size: 2.4em;
+            margin-bottom: 4px;
+            font-weight: 700;
+        }
+        .sub {
+            color: #888;
+            margin-bottom: 8px;
+            font-size: 1.05em;
+        }
+        .playlist-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .playlist-link {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 40px;
+            background: #2a2a3a;
+            border: 1px solid #555;
+            color: #ccc;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+        .playlist-link:hover {
+            background: #3a3a5a;
+            border-color: #ff9f0a;
+            color: #fff;
+            transform: scale(1.02);
+        }
+        .playlist-link.yt:hover {
+            border-color: #ff0000;
+        }
+        .playlist-link.sp:hover {
+            border-color: #1db954;
+        }
+        .playlist-link.sc:hover {
+            border-color: #ff7700;
+        }
+        .season-block {
+            max-width: 640px;
+            margin: 0 auto 28px auto;
+            text-align: left;
+            background: #252528;
+            border-radius: 16px;
+            padding: 16px 18px 12px 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        .season-block .season-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ff9f0a;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 8px;
+        }
+        .season-block .season-title .badge {
+            font-size: 12px;
+            background: #3a3a3c;
+            color: #aaa;
+            padding: 0 10px;
+            border-radius: 30px;
+            font-weight: 400;
+        }
+        .track-item {
+            padding: 5px 0 5px 10px;
+            border-left: 2px solid transparent;
+            transition: border-color 0.2s, background 0.2s;
+            border-radius: 0 6px 6px 0;
+            padding-left: 12px;
+            margin-bottom: 1px;
+        }
+        .track-item:hover {
+            background: #2e2e32;
+            border-left-color: #ff9f0a;
+        }
+        .track-item .name {
+            font-size: 15px;
+            font-weight: 500;
+            color: #f0f0f0;
+        }
+        .track-item .artist {
+            font-size: 13px;
+            color: #888;
+            margin-left: 6px;
+        }
+        .track-item .artist::before {
+            content: "— ";
+            color: #555;
+        }
+        .epilogue-block {
+            border-left: 3px solid #ff9f0a;
+            background: #1f1f22;
+        }
+        .epilogue-block .season-title {
+            color: #ffb347;
+        }
+        footer {
+            margin-top: 40px;
+            color: #555;
+            font-size: 0.85em;
+            border-top: 1px solid #2a2a2c;
+            padding-top: 24px;
+        }
+        @media (max-width: 500px) {
+            .season-block {
+                padding: 12px 12px 10px 12px;
+            }
+            .track-item .name {
+                font-size: 14px;
+            }
+            .track-item .artist {
+                font-size: 12px;
+                display: block;
+                margin-left: 0;
+            }
+            .track-item .artist::before {
+                content: "";
+            }
+            .playlist-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .playlist-link {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a class="back" href="index-en.html">← Back to seasons</a>
+
+    <h1>Soundtracks</h1>
+    <p class="sub">Songs that played inside me during each season</p>
+
+    <div class="playlist-links">
+        <a class="playlist-link yt" href="https://music.youtube.com/playlist?list=PLGsJuFb9fH-Y&si=z_L-IbXUXKN4YpwG" target="_blank" rel="noopener noreferrer">
+            ▶ YouTube Music
+        </a>
+        <a class="playlist-link sp" href="https://open.spotify.com/playlist/1jowELELAPwUZ5BguDYAtL?si=0AxHnEmkQvyB4HABaalKYg" target="_blank" rel="noopener noreferrer">
+            ● Spotify
+        </a>
+        <a class="playlist-link sc" href="https://on.soundcloud.com/2cQcCj6qVSVZKIv5zg" target="_blank" rel="noopener noreferrer">
+            ♪ SoundCloud
+        </a>
+    </div>
+
+    <!-- EPILOGUE -->
+    <div class="season-block epilogue-block">
+        <div class="season-title">
+            Epilogue
+            <span class="badge">9 tracks</span>
+        </div>
+        <div class="track-item"><span class="name">эпилог</span> <span class="artist">mzlff</span></div>
+        <div class="track-item"><span class="name">Батареи</span> <span class="artist">Нервы</span></div>
+        <div class="track-item"><span class="name">Школа не нужна</span> <span class="artist">Пошлая Молли</span></div>
+        <div class="track-item"><span class="name">High Enough (Slowed)</span> <span class="artist">K.Flay</span></div>
+        <div class="track-item"><span class="name">No Static</span> <span class="artist">Nappy Roots</span></div>
+        <div class="track-item"><span class="name">Безжалісно і ніжно</span> <span class="artist">Сусіди Стерплять</span></div>
+        <div class="track-item"><span class="name">эпилог</span> <span class="artist">mzlff</span></div>
+        <div class="track-item"><span class="name">Твое тело</span> <span class="artist">somewhaat</span></div>
+        <div class="track-item"><span class="name">привет</span> <span class="artist">навздохе</span></div>
+    </div>
+
+    <!-- SEASON 4 -->
+    <div class="season-block">
+        <div class="season-title">
+            Season 4 — The Last Pain
+            <span class="badge">28 tracks</span>
+        </div>
+        <div class="track-item"><span class="name">Гори</span> <span class="artist">Гудтаймс</span></div>
+        <div class="track-item"><span class="name">Видение</span> <span class="artist">Гудтаймс</span></div>
+        <div class="track-item"><span class="name">Выходные</span> <span class="artist">СТИНТ</span></div>
+        <div class="track-item"><span class="name">Loving Machine</span> <span class="artist">TV Girl</span></div>
+        <div class="track-item"><span class="name">Futura</span> <span class="artist">Fortuna 812</span></div>
+        <div class="track-item"><span class="name">iMessage</span> <span class="artist">Fortuna 812</span></div>
+        <div class="track-item"><span class="name">тайны</span> <span class="artist">тёмный принц</span></div>
+        <div class="track-item"><span class="name">Дура</span> <span class="artist">СТИНТ</span></div>
+        <div class="track-item"><span class="name">Мой друг</span> <span class="artist">Макс Корж</span></div>
+        <div class="track-item"><span class="name">Мотылек</span> <span class="artist">Макс Корж</span></div>
+        <div class="track-item"><span class="name">Где твоя любовь?</span> <span class="artist">Макс Корж</span></div>
+        <div class="track-item"><span class="name">Fireflies</span> <span class="artist">Spaceouters</span></div>
+        <div class="track-item"><span class="name">анабиоз</span> <span class="artist">mzlff</span></div>
+        <div class="track-item"><span class="name">distant</span> <span class="artist">Øneheart & liminalyx</span></div>
+        <div class="track-item"><span class="name">Привет.</span> <span class="artist">Kambulat</span></div>
+        <div class="track-item"><span class="name">love?</span> <span class="artist">Locked23 & auratoshi</span></div>
+        <div class="track-item"><span class="name">Кмон</span> <span class="artist">Пика</span></div>
+        <div class="track-item"><span class="name">Creep</span> <span class="artist">Radiohead</span></div>
+        <div class="track-item"><span class="name">я не могу не писать музыку (Альбом, 2026)</span> <span class="artist">cold carti</span></div>
+        <div class="track-item"><span class="name">моя слабость</span> <span class="artist">4n Way</span></div>
+        <div class="track-item"><span class="name">Дом</span> <span class="artist">Cold Carti</span></div>
+        <div class="track-item"><span class="name">днями и ночами</span> <span class="artist">BUSHIDO ZHO, Scally Milano & Полки</span></div>
+        <div class="track-item"><span class="name">16 Lines</span> <span class="artist">Lil Peep</span></div>
+        <div class="track-item"><span class="name">ПУСТОТА</span> <span class="artist">GONE.Fludd</span></div>
+        <div class="track-item"><span class="name">скоро</span> <span class="artist">Cold Carti</span></div>
+        <div class="track-item"><span class="name">я сохраню</span> <span class="artist">cold carti</span></div>
+        <div class="track-item"><span class="name">dark snowy night (Slowed & Reverb Version)</span> <span class="artist">daniel.mp3</span></div>
+        <div class="track-item"><span class="name">Не в этом городе</span> <span class="artist">xe1to</span></div>
+    </div>
+
+    <!-- SEASON 3 -->
+    <div class="season-block">
+        <div class="season-title">
+            Season 3 — Unforgotten Old
+            <span class="badge">9 tracks</span>
+        </div>
+        <div class="track-item"><span class="name">новогодний</span> <span class="artist">MZLFF</span></div>
+        <div class="track-item"><span class="name">ты че обиделась</span> <span class="artist">madk1d & темный принц</span></div>
+        <div class="track-item"><span class="name">Равнодушие (feat. Сюзанна)</span> <span class="artist">Мальбэк</span></div>
+        <div class="track-item"><span class="name">больше, чем творчество</span> <span class="artist">CUPSIZE</span></div>
+        <div class="track-item"><span class="name">Живая петля</span> <span class="artist">ЛСП</span></div>
+        <div class="track-item"><span class="name">abuse/love</span> <span class="artist">блэйзи?</span></div>
+        <div class="track-item"><span class="name">Мурашки</span> <span class="artist">V $ V PRiNCE</span></div>
+        <div class="track-item"><span class="name">Мне это не нужно</span> <span class="artist">Kizaru</span></div>
+        <div class="track-item"><span class="name">котёнок2021</span> <span class="artist">Фрайт24</span></div>
+    </div>
+
+    <!-- SEASON 2 -->
+    <div class="season-block">
+        <div class="season-title">
+            Season 2 — One-Man Show
+            <span class="badge">11 tracks</span>
+        </div>
+        <div class="track-item"><span class="name">Спи спокойно</span> <span class="artist">Нервы</span></div>
+        <div class="track-item"><span class="name">Грубым дается радость</span> <span class="artist">Вася Обломов</span></div>
+        <div class="track-item"><span class="name">Эмигрант</span> <span class="artist">Green Grey</span></div>
+        <div class="track-item"><span class="name">Это не мой вайб</span> <span class="artist">Стинт</span></div>
+        <div class="track-item"><span class="name">GRAILED</span> <span class="artist">1nonly & Freddie Dredd</span></div>
+        <div class="track-item"><span class="name">Happy End</span> <span class="artist">Стинт</span></div>
+        <div class="track-item"><span class="name">Все как у людей</span> <span class="artist">Noize MC</span></div>
+        <div class="track-item"><span class="name">СТРАНА ЧУДЕС</span> <span class="artist">ТЯЖЁЛАЯ АТЛЕТИКА</span></div>
+        <div class="track-item"><span class="name">Невыносимо</span> <span class="artist">MZLFF & Слава КПСС</span></div>
+        <div class="track-item"><span class="name">Ханнамонтана</span> <span class="artist">Пошлая Молли</span></div>
+        <div class="track-item"><span class="name">Бриллианты</span> <span class="artist">ЛСП</span></div>
+        <div class="track-item"><span class="name">Wish (Audiomack Trap Symphony Version)</span> <span class="artist">Trippie Redd & Diplo</span></div>
+    </div>
+
+    <!-- SEASON 1 -->
+    <div class="season-block">
+        <div class="season-title">
+            Season 1 — The Dreamer
+            <span class="badge">14 tracks</span>
+        </div>
+        <div class="track-item"><span class="name">Отпускай</span> <span class="artist">Три Дня Дождя</span></div>
+        <div class="track-item"><span class="name">Одно и тоже</span> <span class="artist">IOWA</span></div>
+        <div class="track-item"><span class="name">Вечно молодой</span> <span class="artist">Смысловые Галлюцинации</span></div>
+        <div class="track-item"><span class="name">таблетки</span> <span class="artist">трагедия</span></div>
+        <div class="track-item"><span class="name">moog city (ambient)</span> <span class="artist">Exhibit & Analoq</span></div>
+        <div class="track-item"><span class="name">Mai</span> <span class="artist">Videoclub</span></div>
+        <div class="track-item"><span class="name">PAFOS</span> <span class="artist">Wicsur</span></div>
+        <div class="track-item"><span class="name">Андеграунд</span> <span class="artist">ЙОРШ</span></div>
+        <div class="track-item"><span class="name">так похуй</span> <span class="artist">madk1d</span></div>
+        <div class="track-item"><span class="name">distorted memories (Slowed + Reverb)</span> <span class="artist">Øneheart</span></div>
+        <div class="track-item"><span class="name">apathy (Slowed + Reverb)</span> <span class="artist">Øneheart</span></div>
+        <div class="track-item"><span class="name">ПУСТОЙ ВОКЗАЛ</span> <span class="artist">MORGENSTERN</span></div>
+        <div class="track-item"><span class="name">Surreal</span> <span class="artist">Flawed Mangoes</span></div>
+        <div class="track-item"><span class="name">Bout it (instrumental)</span> <span class="artist">JMSN</span></div>
+    </div>
+
+    <footer>© «Choose Me» 2026</footer>
+</body>
+</html>

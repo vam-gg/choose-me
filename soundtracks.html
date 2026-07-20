@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Саундтреки — Выбери меня</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #1c1c1e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 30px 16px;
+            text-align: center;
+        }
+        a {
+            color: #ff9f0a;
+            text-decoration: none;
+        }
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background: #2c2c2e;
+            color: #aaa;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        .back:hover {
+            background: #3a3a3c;
+            color: #fff;
+        }
+        h1 {
+            color: #ff9f0a;
+            font-size: 2em;
+            margin-bottom: 8px;
+        }
+        .sub {
+            color: #888;
+            margin-bottom: 30px;
+            font-size: 1em;
+        }
+        .track-list {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: left;
+        }
+        .track {
+            background: #2a2a2c;
+            padding: 14px 20px;
+            border-radius: 14px;
+            border-left: 4px solid #ff9f0a;
+            transition: background 0.2s;
+        }
+        .track:hover {
+            background: #3a3a3c;
+        }
+        .track .season-tag {
+            font-size: 12px;
+            color: #ff9f0a;
+            background: #3a3a3c;
+            padding: 2px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+        .track .name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .track .artist {
+            font-size: 14px;
+            color: #999;
+            margin-top: 2px;
+        }
+        .track .note {
+            font-size: 13px;
+            color: #777;
+            margin-top: 4px;
+            font-style: italic;
+        }
+        footer {
+            margin-top: 40px;
+            color: #555;
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+<body>
+    <a class="back" href="index.html">← Назад к сезонам</a>
+
+    <h1>🎵 Саундтреки</h1>
+    <p class="sub">Песни, которые звучали внутри меня в каждом сезоне</p>
+
+    <div class="track-list">
+        <!-- 1 сезон -->
+        <div class="track">
+            <div class="season-tag">1 сезон — Фантазёр</div>
+            <div class="name">Название песни 1</div>
+            <div class="artist">Исполнитель</div>
+            <div class="note">⚡ Короткая заметка — почему эта песня</div>
+        </div>
+
+        <!-- 2 сезон -->
+        <div class="track">
+            <div class="season-tag">2 сезон — Театр Одного Актера</div>
+            <div class="name">Название песни 2</div>
+            <div class="artist">Исполнитель</div>
+            <div class="note">🎭 Ещё одна заметка</div>
+        </div>
+
+        <!-- 3 сезон -->
+        <div class="track">
+            <div class="season-tag">3 сезон — Незабытое Старое</div>
+            <div class="name">Название песни 3</div>
+            <div class="artist">Исполнитель</div>
+            <div class="note">📼 Ностальгическая заметка</div>
+        </div>
+
+        <!-- 4 сезон -->
+        <div class="track">
+            <div class="season-tag">4 сезон — The Last Pain</div>
+            <div class="name">Название песни 4</div>
+            <div class="artist">Исполнитель</div>
+            <div class="note">🖤 Финальная заметка</div>
+        </div>
+
+        <!-- Эпилог (опционально) -->
+        <div class="track">
+            <div class="season-tag">Эпилог</div>
+            <div class="name">Название песни 5</div>
+            <div class="artist">Исполнитель</div>
+            <div class="note">🌅 Послесловие</div>
+        </div>
+    </div>
+
+    <footer>© «Выбери меня» 2026</footer>
+</body>
+</html>

@@ -13,8 +13,35 @@
         }
         h1 { color: #ff9f0a; font-size: 2em; margin-bottom: 0.2em; }
         .subtitle { color: #aaa; margin-bottom: 30px; }
-        .lang-switch {
+        
+        /* Верхнее меню */
+        .top-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .menu-left {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .menu-left a {
+            color: #ff9f0a;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 4px 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+        .menu-left a:hover {
+            border-bottom-color: #ff9f0a;
+        }
+        .menu-left a.active {
+            border-bottom-color: #ff9f0a;
         }
         .lang-switch a {
             color: #ff9f0a; text-decoration: none;
@@ -23,6 +50,8 @@
         .lang-switch a.active {
             font-weight: bold; text-decoration: underline;
         }
+        
+        /* Список сезонов */
         .season-list {
             display: flex; flex-direction: column;
             gap: 15px; align-items: center;
@@ -36,23 +65,128 @@
         }
         .season-link:hover { background: #5a5a5c; }
         .season-link:active { background: #ff9f0a; color: #000; }
+        
+        /* Блок контактов */
+        #contactsBlock {
+            display: none;
+            background: #2c2c2e;
+            border-radius: 12px;
+            padding: 20px 24px 24px;
+            margin: 0 auto 30px auto;
+            max-width: 450px;
+            border: 1px solid #444;
+            text-align: left;
+        }
+        #contactsBlock .contacts-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        #contactsBlock .contacts-header span {
+            color: #ff9f0a;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        #contactsBlock .contacts-header a {
+            color: #888;
+            text-decoration: none;
+            font-size: 20px;
+            line-height: 1;
+        }
+        #contactsBlock .contacts-header a:hover {
+            color: #e0e0e0;
+        }
+        .contact-item {
+            color: #e0e0e0;
+            font-size: 15px;
+            padding: 6px 0;
+            border-bottom: 1px solid #3a3a3c;
+        }
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        .contact-item a {
+            color: #e0e0e0;
+            text-decoration: none;
+            border-bottom: 1px dashed #666;
+        }
+        .contact-item a:hover {
+            color: #ff9f0a;
+            border-bottom-color: #ff9f0a;
+        }
+        
         footer { margin-top: 40px; color: #666; font-size: 0.85em; }
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <a href="index.html" class="active">RU</a> |
-        <a href="index-en.html">EN</a>
+
+    <!-- Верхнее меню -->
+    <div class="top-menu">
+        <div class="menu-left">
+            <a href="#" class="active" onclick="showTab('seasons'); return false;">📖 Сезоны</a>
+            <a href="#" onclick="showTab('contacts'); return false;">✉️ Контакты</a>
+        </div>
+        <div class="lang-switch">
+            <a href="index.html" class="active">RU</a> |
+            <a href="index-en.html">EN</a>
+        </div>
     </div>
-    <h1>📜 Выбери меня</h1>
-    <p class="subtitle">Выберите сезон для чтения:</p>
-    <div class="season-list">
-        <a class="season-link" href="season1.html">1 сезон — Фантазёр</a>
-        <a class="season-link" href="season2.html">2 сезон — Театр Одного Актера</a>
-        <a class="season-link" href="season3.html">3 сезон — Незабытое Старое</a>
-        <a class="season-link" href="season4.html">4 сезон — The Last Pain</a>
-        <a class="season-link" href="epilogue.html">Эпилог</a>
+
+    <!-- Блок: Сезоны -->
+    <div id="seasonsTab">
+        <h1>📜 Выбери меня</h1>
+        <p class="subtitle">Выберите сезон для чтения:</p>
+        <div class="season-list">
+            <a class="season-link" href="season1.html">1 сезон — Фантазёр</a>
+            <a class="season-link" href="season2.html">2 сезон — Театр Одного Актера</a>
+            <a class="season-link" href="season3.html">3 сезон — Незабытое Старое</a>
+            <a class="season-link" href="season4.html">4 сезон — The Last Pain</a>
+            <a class="season-link" href="epilogue.html">Эпилог</a>
+        </div>
     </div>
+
+    <!-- Блок: Контакты (изначально скрыт) -->
+    <div id="contactsTab" style="display: none;">
+        <h1 style="margin-top: 0;">✉️ Контакты</h1>
+        <p class="subtitle">Свяжитесь со мной или оставьте отзыв</p>
+        <div id="contactsBlock">
+            <div class="contacts-header">
+                <span>Связаться</span>
+            </div>
+            <div class="contact-item">
+                📧 <a href="mailto:ваш-email@example.com">ваш-email@example.com</a>
+            </div>
+            <div class="contact-item">
+                💬 <a href="https://t.me/ваш_юз" target="_blank">@ваш_юз</a>
+            </div>
+        </div>
+    </div>
+
     <footer>© «Выбери меня» 2026</footer>
+
+    <script>
+        function showTab(tab) {
+            // Скрываем все вкладки
+            document.getElementById('seasonsTab').style.display = 'none';
+            document.getElementById('contactsTab').style.display = 'none';
+            
+            // Показываем нужную
+            if (tab === 'seasons') {
+                document.getElementById('seasonsTab').style.display = 'block';
+            } else if (tab === 'contacts') {
+                document.getElementById('contactsTab').style.display = 'block';
+            }
+            
+            // Меняем активную ссылку в меню
+            const links = document.querySelectorAll('.menu-left a');
+            links.forEach(link => link.classList.remove('active'));
+            
+            // Находим ссылку по тексту или data-атрибуту
+            const activeLink = document.querySelector(`.menu-left a[onclick*="${tab}"]`);
+            if (activeLink) activeLink.classList.add('active');
+        }
+    </script>
+
 </body>
 </html>

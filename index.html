@@ -68,7 +68,6 @@
         
         /* Блок контактов */
         #contactsBlock {
-            display: none;
             background: #2c2c2e;
             border-radius: 12px;
             padding: 20px 24px 24px;
@@ -125,7 +124,7 @@
     <div class="top-menu">
         <div class="menu-left">
             <a href="#" class="active" onclick="showTab('seasons'); return false;">📖 Сезоны</a>
-            <a href="#" onclick="showTab('contacts'); return false;">✉️ Контакты</a>
+            <a href="#" onclick="showTab('feedback'); return false;">✉️ Оставить отзыв</a>
         </div>
         <div class="lang-switch">
             <a href="index.html" class="active">RU</a> |
@@ -146,14 +145,21 @@
         </div>
     </div>
 
-    <!-- Блок: Контакты (изначально скрыт) -->
-    <div id="contactsTab" style="display: none;">
-        <h1 style="margin-top: 0;">✉️ Контакты</h1>
-        <p class="subtitle">Свяжитесь со мной или оставьте отзыв</p>
+    <!-- Блок: Оставить отзыв (изначально скрыт) -->
+    <div id="feedbackTab" style="display: none;">
+        <h1 style="margin-top: 0;">✉️ Оставить отзыв</h1>
+        <p class="subtitle">Поделитесь своим мнением о прочитанном</p>
+        
         <div id="contactsBlock">
             <div class="contacts-header">
-                <span>Связаться</span>
+                <span>📝 Написать отзыв</span>
             </div>
+            
+            <!-- Сюда потом добавим форму -->
+            <div style="text-align: center; padding: 20px 0; color: #888;">
+                Здесь будет форма для отзыва
+            </div>
+            
             <div class="contact-item">
                 📧 <a href="mailto:ваш-email@example.com">ваш-email@example.com</a>
             </div>
@@ -169,20 +175,19 @@
         function showTab(tab) {
             // Скрываем все вкладки
             document.getElementById('seasonsTab').style.display = 'none';
-            document.getElementById('contactsTab').style.display = 'none';
+            document.getElementById('feedbackTab').style.display = 'none';
             
             // Показываем нужную
             if (tab === 'seasons') {
                 document.getElementById('seasonsTab').style.display = 'block';
-            } else if (tab === 'contacts') {
-                document.getElementById('contactsTab').style.display = 'block';
+            } else if (tab === 'feedback') {
+                document.getElementById('feedbackTab').style.display = 'block';
             }
             
             // Меняем активную ссылку в меню
             const links = document.querySelectorAll('.menu-left a');
             links.forEach(link => link.classList.remove('active'));
             
-            // Находим ссылку по тексту или data-атрибуту
             const activeLink = document.querySelector(`.menu-left a[onclick*="${tab}"]`);
             if (activeLink) activeLink.classList.add('active');
         }
